@@ -1,6 +1,7 @@
 {
 	"type": "module",
 	"dependencies": {
+		"@types/node": "^22.10.5",
 		"discord.js-selfbot-v13": "^3.4.6",
 		"dotenv": "^16.4.7",
 		"prettier": "^3.4.2",
@@ -9,7 +10,7 @@
 	"scripts": {
 		"fmt": "prettier --log-level=warn --write './*.ts'",
 		"build": "tsc",
-		"start": "bash -c 'node . 2>&1 >log & echo $! >pid'",
+		"start": "bash -c 'node dist 2>&1 >log & echo $! >pid'",
 		"stop": "bash -c 'kill $(<pid)'"
 	},
 	"prettier": {
