@@ -8,7 +8,9 @@
 	},
 	"scripts": {
 		"fmt": "prettier --log-level=warn --write './*.ts'",
-		"build": "tsc"
+		"build": "tsc",
+		"start": "bash -c 'node . 2>&1 >log & echo $! >pid'",
+		"stop": "bash -c 'kill $(<pid)'"
 	},
 	"prettier": {
 		"arrowParens": "avoid",
